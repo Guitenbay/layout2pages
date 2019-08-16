@@ -25,7 +25,7 @@
 ### 0x00
     这里有两个版本的 函数文件：
     - layout2pages.beta.html.js     # 直接用在 html 文件中，用 <script> 标签引入
-    - layout2pages.bata.common.js   # 符合 CommonJS 标准，用 require() 方式引入函数
+    - layout2pages.beta.common.js   # 符合 CommonJS 标准，用 require() 方式引入函数
 
 > 可以查看 index.html 中的引入方法
 
@@ -106,7 +106,8 @@
 具体使用
 
     引入函数之后，我们需要先确定 content, container, nodes 这三个参数
-    由于该函数是转化函数，于是需要先在 content 所对应的元素下写下需要在页面显示的 HTML，并确定 nodes.detachable (可拆分元素)，nodes.sticky (可拆分元素之间的粘粘关系) 和 nodes.shell (可拆分元素需要包裹的外壳 HTML)，例如：
+    
+> 由于该函数是转化函数，于是需要先在 content 所对应的元素下写下需要在页面显示的 HTML，并确定 nodes.detachable (可拆分元素)，nodes.sticky (可拆分元素之间的粘粘关系) 和 nodes.shell (可拆分元素需要包裹的外壳 HTML)，例如：
 
 **对于 index.html**
 
@@ -154,7 +155,7 @@ layout2pages(content, pages, nodes);
 
 3. divider 允许为空，当为空时，直接使用 `<hr></hr>`
 
-4. inner 允许为空，inner 为空时，maxHeight 字段会无效，默认 inner 宽高为 841px x 1189px，padding 为 20px, maxHeigt 高度为 1149px
+4. inner 允许为空，inner 为空时，maxHeight 字段会无效，默认 inner 宽高为 841px * 1189px，padding 为 20px, maxHeight 高度为 1149px
 
 5. inner 自定义时，宽高需要自己设置，maxHeight 的值应该比 inner 的高度小一些
 
