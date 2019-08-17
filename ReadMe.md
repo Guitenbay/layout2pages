@@ -157,7 +157,7 @@ layout2pages(content, pages, nodes);
 
 1. shell 中的 元素在纵向上不能有 padding 和 margin, 因为这部分的高度不在计算范围内，却能在页面显示，会出现元素溢出
 
-2. margin 的高度无法获取，在这个函数中会被忽略，所以 可拆分元素 的 margin 必须为 0
+2. margin 的高度无法获取，在这个函数中会被忽略，所以 可拆卸元素 的 margin 必须为 0
 
 3. divider 允许为空，当为空时，直接使用 `<hr></hr>`
 
