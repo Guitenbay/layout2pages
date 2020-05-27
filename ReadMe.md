@@ -1,5 +1,7 @@
 # Layout to Pages
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Guitenbay/layout2pages/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/layout2pages)](https://www.npmjs.com/package/layout2pages)
+
 > beta 版已移动端 beta 分支
 
 [Demo](https://guitenbay.github.io/layout2pages/example/src/index.html)
@@ -15,7 +17,7 @@
 ## 使用方法
 
 ### 0x00
-    这里有两个版本的 函数文件：
+    这里有两个版本的 函数文件：`
     - layout2pages.beta.html.js     # 直接用在 html 文件中，用 <script> 标签引入
     - layout2pages.beta.common.js   # 符合 CommonJS 标准，用 require() 方式引入函数
 
