@@ -1,4 +1,6 @@
-# Layout to Pages `.beta`
+# Layout to Pages
+
+> beta 版已经移到 beta 分支
 
 [Demo](https://guitenbay.github.io/layout2pages/index.html)
 

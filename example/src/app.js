@@ -6,10 +6,11 @@
  * 4. inner 允许为空，inner 为空时，maxHeight 字段会无效，默认 inner 宽高为 841px x 1189px，padding 为 20px, maxHeigt 高度为 1149px
  * 5. inner 自定义时，宽高需要自己设置，maxHeight 的值应该比 inner 的高度小一些
  */
+const layout2pages = require('../../lib/index').layout2pages;
 
-let content = '[name="resource"]';
-let pages = '[name="pages"]';
-let nodes = {
+const content = '[name="resource"]';
+const pages = '[name="pages"]';
+const nodes = {
     detachable: [
         'h1', 'h2', 'desc', 'li', 'th', 'tr'
     ],
@@ -27,4 +28,10 @@ let nodes = {
         }
     }
 }
-layout2pages(content, pages, nodes);
+
+const transformBtn = document.querySelector('button#transform');
+transformBtn.onclick = function() {
+    layout2pages(content, pages, nodes);
+    this.setAttribute('disabled', 'true');
+    this.innerHTML = '转化成功！'
+}

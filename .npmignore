@@ -1,0 +1,14 @@
+/.git/
+/.vscode/
+/node_modules/
+/example/node_modules/
+.gitignore
+.npmignore
+.prettierrc
+.editorconfig
+tslint.json
+tsconfig.json
+note.md
+*.log
+# 排除 源代码所在文件
+src/

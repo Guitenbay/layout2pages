@@ -1,0 +1,41 @@
+{
+  "name": "layout2pages",
+  "version": "1.0.0",
+  "description": "将完整页面形式转化成类似 pdf A4 页面形式的转换函数",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"lib/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "build": "tsc"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guitenbay/layout2pages.git"
+  },
+  "keywords": [
+    "typescript",
+    "layout",
+    "pdf",
+    "html"
+  ],
+  "author": "Guitenbay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guitenbay/layout2pages/issues"
+  },
+  "homepage": "https://github.com/Guitenbay/layout2pages#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.3.38",
+    "prettier": "^2.0.5",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "pre-commit": "^1.2.2"
+  }
+}
