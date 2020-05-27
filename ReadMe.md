@@ -150,6 +150,18 @@ let nodes = {
 layout2pages(content, pages, nodes);
 ```
 
+## 示例
+
+你可以下载本仓库
+```bash
+$ git clone <url>
+```
+打开 example 文件夹
+```bash
+$ cd example
+```
+然后在浏览器打开 `index.html` 文件查看示例
+
 ## 注意要点
 
 *特别注意*
