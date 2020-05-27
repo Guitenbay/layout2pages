@@ -17,15 +17,57 @@
 ## 使用方法
 
 ### 0x00
-    这里有两个版本的 函数文件：`
-    - layout2pages.beta.html.js     # 直接用在 html 文件中，用 <script> 标签引入
-    - layout2pages.beta.common.js   # 符合 CommonJS 标准，用 require() 方式引入函数
 
-> 可以查看 index.html 中的引入方法
+```bash
+$ npm install -S layout2pages
+```
 
-### 0x01
+### 0x01 具体使用
 
-函数有 6 个参数：
+    引入函数之后，我们需要先确定 content, container, nodes 这三个参数
+    
+> 由于该函数是转化函数，于是需要先在 content 所对应的元素下写下需要在页面显示的 HTML，并确定 nodes.detachable (可拆卸元素)，nodes.sticky (可拆卸元素之间的粘粘关系) 和 nodes.shell (可拆卸元素需要包裹的外壳 HTML)，例如：
+
+**对于 index.html**
+
+```html
+<div name="resource">
+    要转化的 html
+</div>
+<div name="pages">
+    转化到的位置
+</div>
+```
+
+**对于 app.js**
+
+```js
+import { layout2pages } from 'layout2pages'; 
+const content = '[name="resource"]';
+const pages = '[name="pages"]';
+const nodes = {
+    detachable: [
+        'h1', 'h2', 'desc', 'li', 'th', 'tr'
+    ],
+    sticky: {
+        'th': 'tr'
+    },
+    shell: {
+        'tr': {
+            entry: '[name="tr-entry"]',
+            html: '<table name="tr-entry" rules=none></table>'
+        },
+        'li': {
+            entry: '[name="li-entry"]',
+            html: '<ul name="li-entry"></ul>'
+        }
+    }
+}
+// 在这里调用转化函数
+layout2pages(content, pages, nodes);
+```
+
+### 0x02 函数参数描述：
 
 - `content` （必须）
     
@@ -93,52 +135,6 @@
         一段 HTML 代码
         
         表示页面间的分隔线
-
-### 0x02 
-
-具体使用
-
-    引入函数之后，我们需要先确定 content, container, nodes 这三个参数
-    
-> 由于该函数是转化函数，于是需要先在 content 所对应的元素下写下需要在页面显示的 HTML，并确定 nodes.detachable (可拆卸元素)，nodes.sticky (可拆卸元素之间的粘粘关系) 和 nodes.shell (可拆卸元素需要包裹的外壳 HTML)，例如：
-
-**对于 index.html**
-
-```html
-<div name="resource">
-    要转化的 html
-</div>
-<div name="pages">
-    转化到的位置
-</div>
-```
-
-**对于 app.js**
-
-```js
-let content = '[name="resource"]';
-let pages = '[name="pages"]';
-let nodes = {
-    detachable: [
-        'h1', 'h2', 'desc', 'li', 'th', 'tr'
-    ],
-    sticky: {
-        'th': 'tr'
-    },
-    shell: {
-        'tr': {
-            entry: '[name="tr-entry"]',
-            html: '<table name="tr-entry" rules=none></table>'
-        },
-        'li': {
-            entry: '[name="li-entry"]',
-            html: '<ul name="li-entry"></ul>'
-        }
-    }
-}
-// 在这里调用转化函数
-layout2pages(content, pages, nodes);
-```
 
 ## 示例
 
