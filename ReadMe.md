@@ -8,18 +8,6 @@
 
     这是一个能将完整的 HTML 页面转化为一个个类似 PDF 页面的函数
 
-<div style="display: flex;justify-content:space-around;align-items:center">
-<figure style="flex: 1">
-    <img src="./img/layout2pages-html.png">
-    <figcaption style="text-align: center">转化前的 HTML</figcaption>
-</figure>
-<span style="font-size: 1.4rem;letter-spacing: 1.4px;transform: translateY(-0.7rem)">To</span>
-<figure style="flex: 1">
-    <img src="./img/layout2pages-pages.png">
-    <figcaption style="text-align: center">转化后的 Pages</figcaption>
-</figure>
-</div>
-
 ## 依赖
 
     jQuery 3.4.1 及以上版本
