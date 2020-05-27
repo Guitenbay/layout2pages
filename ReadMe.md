@@ -1,4 +1,4 @@
-# Layout to Pages `.beta`
+# Layout to Pages
 
 > beta 版已移动端 beta 分支
 
