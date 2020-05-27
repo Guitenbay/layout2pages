@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Guitenbay/layout2pages/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/layout2pages)](https://www.npmjs.com/package/layout2pages)
 
-> beta 版已移动端 beta 分支
+> beta 版已移动到 beta 分支
 
 [Demo](https://guitenbay.github.io/layout2pages/example/src/index.html)
 
