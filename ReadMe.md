@@ -1,8 +1,8 @@
-# Layout to Pages
+# Layout to Pages `.beta`
 
-> beta 版已经移到 beta 分支
+> beta 版已移动端 beta 分支
 
-[Demo](https://guitenbay.github.io/layout2pages/index.html)
+[Demo](https://guitenbay.github.io/layout2pages/example/src/index.html)
 
 ## 描述
 
@@ -37,23 +37,23 @@
 
 函数有 6 个参数：
 
-- content   
+- `content` （必须）
     
         被布局的内容 -> 一个可用于 jQuery 查找的字符串值，包含供匹配当前元素集合的选择器表达式
 
-- container 
+- `container` （必须）
         
         页面容器，能包容 page 的容器 -> 一个可用于 jQuery 查找的字符串值，包含供匹配当前元素集合的选择器表达式
     
-- nodes
+- `nodes` （必须）
 
         元素的必要属性值
         
-    - detachable: Array
+    - `detachable`: Array
     
             表示所有的 可拆卸元素，仅支持 class 字符串数组
     
-    - sticky: Object
+    - `sticky`: Object
     
             [ '粘粘元素' : '被粘粘元素' ] 
 
@@ -65,7 +65,7 @@
             
             此时，这些粘在一起的 可拆卸元素 可以看成 一个 大可拆卸元素，这个 大可拆卸元素 的 shell 被认为是 最后一个 被粘黏 的 可拆卸元素 的 shell
     
-    - shell: Object 
+    - `shell`: Object 
     
             { 
                 key: { 
@@ -81,7 +81,14 @@
             
             说明：不是所有 有 shell 的 可拆卸元素 添加进 inner 时都要包一层 shell，一个 shell 会尽可能包裹所有需要该 shell 的 可拆卸元素
 
-- inner
+- `maxHeight`
+
+        Number
+
+        表示一个页面最大容许高度
+
+- `inner`
+        表示一个页面（page）
 
         {
             entry: String,
@@ -90,20 +97,12 @@
 
         entry: 一个可用于 jQuery 查找的字符串值，包含供匹配当前元素集合的选择器表达式
         html: 一段 HTML 代码，表示一页页面
-        
-        表示一个页面（page）
 
-- divider
+- `divider`
 
         一段 HTML 代码
         
         表示页面间的分隔线
-
-- maxHeight
-
-        Number
-
-        表示一个页面最大容许高度
 
 ### 0x02 
 
