@@ -7,7 +7,7 @@
  * 4. inner 允许为空，inner 为空时，maxHeight 字段会无效，默认 inner 宽高为 841px x 1189px，padding 为 20px, maxHeigt 高度为 1149px
  * 5. inner 自定义时，宽高需要自己设置，maxHeight 的值应该比 inner 的高度小一些
  */
-const layout2pages = require('../../lib/index').layout2pages;
+const layout2pages = require('../../index').layout2pages;
 
 const content = '[name="resource"]';
 const pages = '[name="pages"]';
@@ -37,7 +37,9 @@ transformBtn.onclick = function() {
     this.innerHTML = '转化成功！'
 }
 
-},{"../../lib/index":2}],2:[function(require,module,exports){
+},{"../../index":2}],2:[function(require,module,exports){
+module.exports = require('./lib/index');
+},{"./lib/index":3}],3:[function(require,module,exports){
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -192,7 +194,7 @@ function findDetachableNodes(html, detachableNodes) {
     return queue;
 }
 
-},{"jquery":3}],3:[function(require,module,exports){
+},{"jquery":4}],4:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.5.1
  * https://jquery.com/
