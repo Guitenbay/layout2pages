@@ -69,15 +69,15 @@ layout2pages(content, pages, nodes);
 
 ### 0x02 函数参数描述：
 
-- `content` （必须）
+- `content` （必需）
     
         被布局的内容 -> 一个可用于 jQuery 查找的字符串值，包含供匹配当前元素集合的选择器表达式
 
-- `container` （必须）
+- `container` （必需）
         
         页面容器，能包容 page 的容器 -> 一个可用于 jQuery 查找的字符串值，包含供匹配当前元素集合的选择器表达式
     
-- `nodes` （必须）
+- `nodes` （必需）
 
         元素的必要属性值
         
