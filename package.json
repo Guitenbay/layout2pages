@@ -1,6 +1,6 @@
 {
   "name": "layout2pages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "将完整页面形式转化成类似 pdf A4 页面形式的转换函数",
   "main": "index.js",
   "scripts": {
